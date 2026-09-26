@@ -9,6 +9,9 @@ on:
 jobs:
   digest:
     runs-on: ubuntu-latest
+    concurrency:
+      group: digest
+      cancel-in-progress: false
     if: github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion != 'skipped'
     permissions:
       contents: write
@@ -27,6 +30,7 @@ jobs:
         run: |
           git config user.name "persistent-widow"
           git config user.email "widow@ancientpaths.app"
+          git pull --rebase origin main || true
           git add WIDOW_LOG.md
           git commit -m "digest: $(date -u +%Y-%m-%d)" || echo "nothing to commit"
           git push || echo "push skipped"
