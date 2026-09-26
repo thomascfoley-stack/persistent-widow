@@ -38,6 +38,24 @@ Target site: `BASE_URL` env var, defaults to `https://ancientpaths.app`.
 | `OPENROUTER_API_KEY` | GLM-4V screenshot critique (milestone 3+) |
 | `TEST_EMAIL` / `TEST_PASSWORD` | Authed flows: My Works clickability, Ask determinism |
 
+## Test surface
+
+| Spec | What it tests | Cadence |
+|---|---|---|
+| `smoke` | 5 critical routes × 3 viewports: 200, render marker, no page/console errors, no failed requests | hourly |
+| `sweep` | ~30 routes × 3 viewports, link crawl, 40 manifest-sampled works | nightly |
+| `flows` | Reader (verse panel, interlinear, word tap, font size, translations), Ask (suggestions, filters, anonymous gating, history mode), passage search, word study, desk picker + shared links, settings (dark mode, default translation) | nightly |
+| `perf` | LCP / CLS / TTFB vs budgets, trended to `test-results/perf.jsonl` | nightly |
+| `a11y` | axe-core WCAG A/AA, blocking = critical+serious, details to `test-results/a11y.jsonl` | nightly |
+| `visual` | pixel baselines: 7 pages × 3 viewports + dark mode + large text | nightly |
+| `integrity` | library shelf-count consistency, lexicon works vs manifest, manifest id/status hygiene | nightly |
+| `regressions` | 5 seeded known bugs pinned to issues #1–5 | nightly |
+| `auth` (gated) | uploads (txt/paste/docx/pdf), journal privacy, plans, saved verses — run when `TEST_EMAIL`/`TEST_PASSWORD` secrets set | nightly |
+
+Visual baselines are platform-specific (`-darwin` locally, `-linux` in CI). Refresh CI
+baselines with the scout workflow's `update_snapshots` dispatch flag after any
+intentional design change.
+
 ## The Court's open docket (seeded red)
 
 Every known bug is a **named failing spec** pinned to a permanent issue. The Court
@@ -50,6 +68,9 @@ opens red on day one:
 | #3 | `regression/my-works-clickable` | Cards on /library/uploads not clickable |
 | #4 | `regression/settings-500` | /settings crashes |
 | #5 | `regression/discovery-determinism` | Same Ask query returns different sources run to run |
+| #6 | `integrity` | 18 lexicon works served but absent from canonical manifest |
+| #7 | `a11y` | Serious color-contrast violations on marketing pages |
+| #8 | `perf` | Homepage TTFB ~1.3s, budget 800ms |
 
 When the team fixes one, its spec flips green; two consecutive passing runs close
 the issue as `verified`.

@@ -5,6 +5,22 @@ And shall not God avenge his own elect, which cry day and night unto him? — Lu
 Every run of the Persistent Widow appends a line here. Open issues carry the
 evidence; this log is the running testimony.
 
+## 2026-09-26 — full surface sweep added
+
+The whole site surface is now under test (see README): flows, perf, a11y, visual,
+integrity. New findings from the first full run:
+
+- **#6 lexicon-manifest gap** — 18 lexicon works served, 0 manifest records (pipeline gap)
+- **#7 marketing contrast** — serious color-contrast on /, /features, /why, /about
+  (4+1+2+1 nodes); app pages are clean
+- **#8 homepage TTFB** — / TTFB 1328ms vs 800ms budget (LCP 2264ms, load 9s);
+  /ask 772ms, /library 171ms, /read 219ms, /desk 190ms
+- Reader mechanics mapped: verse panel opens via sup "Verse N, read commentary";
+  reader-size persisted in localStorage; source filters are aria-pressed toggles;
+  anonymous ask gates inline with "Please sign…"; desk picker opens a book dialog
+- Ask suggestions run the query (→ "Search the library for these words")
+- Visual baselines generated for 7 pages × 3 viewports + dark + large text
+
 ## 2026-09-26 — the Widow is commissioned
 
 Seeded five known bugs as named failing specs, each pinned to a Court issue:

@@ -4,6 +4,11 @@ on:
   schedule:
     - cron: "0 8 * * *"
   workflow_dispatch:
+    inputs:
+      update_snapshots:
+        description: "Regenerate visual baselines and commit them"
+        type: boolean
+        default: false
 
 jobs:
   sweep:
@@ -13,6 +18,8 @@ jobs:
       contents: write
     env:
       BASE_URL: https://ancientpaths.app
+      TEST_EMAIL: ${{ secrets.TEST_EMAIL }}
+      TEST_PASSWORD: ${{ secrets.TEST_PASSWORD }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -30,6 +37,15 @@ jobs:
             git commit -m "crawl: refresh route inventory"
             git push
           fi
+      - if: ${{ inputs.update_snapshots == true }}
+        run: npx playwright test visual.spec.ts --update-snapshots
+      - if: ${{ inputs.update_snapshots == true }}
+        run: |
+          git config user.name "persistent-widow"
+          git config user.email "widow@ancientpaths.app"
+          git add specs/visual.spec.ts-snapshots
+          git commit -m "visual: refresh baselines on linux" || echo "no baseline changes"
+          git push || echo "push skipped"
       - run: npx playwright test
       - if: always()
         uses: actions/upload-artifact@v4

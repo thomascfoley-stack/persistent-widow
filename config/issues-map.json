@@ -4,5 +4,8 @@
   "part-splitting": 2,
   "my-works-clickable": 3,
   "settings-500": 4,
-  "discovery-determinism": 5
+  "discovery-determinism": 5,
+  "lexicon-manifest-gap": 6,
+  "marketing-contrast": 7,
+  "homepage-ttfb": 8
 }
