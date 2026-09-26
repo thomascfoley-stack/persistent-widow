@@ -11,6 +11,12 @@
   "auth": [
     "/account/settings",
     "/auth/sign-in",
+    "/auth/sign-in?next=%2Fask",
+    "/auth/sign-in?next=%2Fdesk",
+    "/auth/sign-in?next=%2Fhome",
+    "/auth/sign-in?next=%2Flibrary",
+    "/auth/sign-in?next=%2Fread%2Fjhn%2F1",
+    "/auth/sign-in?next=%2Fsettings",
     "/auth/sign-up"
   ],
   "app": [
@@ -22,7 +28,14 @@
     "/library",
     "/plans",
     "/prayers",
+    "/read/1co/15",
+    "/read/heb/2",
     "/read/jhn/1",
+    "/read/jhn/2",
+    "/read/luk/24",
+    "/read/rom/6",
+    "/read/rom/8",
+    "/read/zec/11",
     "/settings"
   ],
   "library": [
@@ -67,8 +80,10 @@
     "/desk"
   ],
   "discovered": {
-    "lastCrawl": "2026-09-26T21:28:21.162Z",
+    "lastCrawl": "2026-09-26T21:46:37.493Z",
     "journalRoute": "/prayers",
-    "journalHits": ["/prayers (Prayer journal)", "/plans (Reading plans)"]
+    "journalHits": [
+      "/prayers (Prayer journal)"
+    ]
   }
 }
