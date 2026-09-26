@@ -30,3 +30,8 @@ First night's evidence:
   (missing 'c')
 - Noise recorded: `/api/annotations?book=43&chapter=1` returns 401 for anonymous readers
 - Prayer journal discovered at `/prayers`; reading plans at `/plans` (both need auth checks)
+
+## 2026-09-26 scout
+- workflow: scout
+- conclusion: failure
+- commit: 84d673d
