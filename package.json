@@ -1,0 +1,20 @@
+{
+  "name": "persistent-widow",
+  "version": "0.1.0",
+  "private": true,
+  "description": "The Persistent Widow - UI/UX testing agent for ancientpaths.app",
+  "type": "module",
+  "scripts": {
+    "smoke": "playwright test specs/smoke.spec.ts",
+    "sweep": "playwright test specs/sweep.spec.ts",
+    "regressions": "playwright test specs/regressions.spec.ts",
+    "test": "playwright test",
+    "crawl": "node scripts/crawl-inventory.mjs",
+    "sync-manifest": "bash scripts/sync-manifest.sh"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.49.0",
+    "@types/node": "^22.10.0",
+    "typescript": "^5.7.0"
+  }
+}

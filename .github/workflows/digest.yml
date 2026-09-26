@@ -1,0 +1,32 @@
+name: digest
+
+on:
+  workflow_run:
+    workflows: [smoke, scout]
+    types: [completed]
+  workflow_dispatch:
+
+jobs:
+  digest:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion != 'skipped'
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: append run summary to WIDOW_LOG.md
+        run: |
+          {
+            echo ""
+            echo "## $(date -u +%Y-%m-%d) $( [ "${{ github.event.workflow_run.name }}" = "" ] && echo dispatch || echo "${{ github.event.workflow_run.name }}" )"
+            echo "- workflow: ${{ github.event.workflow_run.name || 'digest (dispatch)' }}"
+            echo "- conclusion: ${{ github.event.workflow_run.conclusion || 'dispatched' }}"
+            echo "- commit: ${GITHUB_SHA::7}"
+          } >> WIDOW_LOG.md
+      - name: commit digest
+        run: |
+          git config user.name "persistent-widow"
+          git config user.email "widow@ancientpaths.app"
+          git add WIDOW_LOG.md
+          git commit -m "digest: $(date -u +%Y-%m-%d)" || echo "nothing to commit"
+          git push || echo "push skipped"

@@ -1,0 +1,9 @@
+{
+  "$comment": "Requests that fail on the live site but are known/expected. Filtered from hard failures but still recorded in obs.noise so the Court sees the volume. The annotations 401 fires for anonymous users on the reader and library pages.",
+  "noise": [
+    { "pattern": "/api/annotations", "status": 401 }
+  ],
+  "consoleErrorNoise": [
+    { "pattern": "status of 401", "requiresNoiseResponse": false }
+  ]
+}

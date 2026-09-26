@@ -1,0 +1,74 @@
+{
+  "$comment": "Route inventory for ancientpaths.app. crawl-inventory.mjs refreshes this. `works` entries are /work/{slug} values.",
+  "marketing": [
+    "/",
+    "/about",
+    "/features",
+    "/privacy",
+    "/terms",
+    "/why"
+  ],
+  "auth": [
+    "/account/settings",
+    "/auth/sign-in",
+    "/auth/sign-up"
+  ],
+  "app": [
+    "/ask",
+    "/ask?mode=history",
+    "/desk",
+    "/desk?p=scripture:jhn/1",
+    "/home",
+    "/library",
+    "/plans",
+    "/prayers",
+    "/read/jhn/1",
+    "/settings"
+  ],
+  "library": [
+    "/library",
+    "/library/books",
+    "/library/commentaries",
+    "/library/devotionals",
+    "/library/historians",
+    "/library/hymns-poetry",
+    "/library/notes",
+    "/library/passages",
+    "/library/sermons",
+    "/library/theology",
+    "/library/uploads",
+    "/library/word-study"
+  ],
+  "works": [
+    "/work/bdb-lexicon",
+    "/work/easton-ebd2",
+    "/work/eastons-dictionary",
+    "/work/hitchcock-bible-names",
+    "/work/isbe",
+    "/work/middle-liddell",
+    "/work/naves-topical",
+    "/work/schaff-dictionarybible",
+    "/work/schaff-encyc01",
+    "/work/schaff-encyc02",
+    "/work/schaff-encyc09",
+    "/work/schaff-encyc13",
+    "/work/schaff-encyc13a",
+    "/work/smith-w-bibledict",
+    "/work/smiths-dictionary",
+    "/work/strongs-concordance",
+    "/work/thayers-lexicon",
+    "/work/wace-biodict"
+  ],
+  "critical": [
+    "/",
+    "/ask",
+    "/read/jhn/1",
+    "/library",
+    "/desk"
+  ],
+  "discovered": {
+    "lastCrawl": "2026-09-26T21:28:21.162Z",
+    "journalRoute": "/prayers",
+    "journalHits": ["/prayers (Prayer journal)", "/plans (Reading plans)"]
+  }
+}

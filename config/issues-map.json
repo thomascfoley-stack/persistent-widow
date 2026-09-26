@@ -1,0 +1,8 @@
+{
+  "$comment": "Maps each seeded regression spec to its permanent Court issue. Issue numbers are placeholders until the repo opens on GitHub; issue_bot.py (milestone 4) rewrites them after first filing.",
+  "filename-headings": 1,
+  "part-splitting": 2,
+  "my-works-clickable": 3,
+  "settings-500": 4,
+  "discovery-determinism": 5
+}

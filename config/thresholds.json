@@ -1,0 +1,24 @@
+{
+  "performance": {
+    "lcpMs": 2500,
+    "cls": 0.1,
+    "inpMs": 200,
+    "ttfbMs": 800
+  },
+  "loading": {
+    "contentTimeoutMs": 30000,
+    "streamingTimeoutMs": 120000,
+    "uploadTimeoutMs": 120000
+  },
+  "sweep": {
+    "maxPages": 120,
+    "workSampleSize": 40
+  },
+  "a11y": {
+    "tags": ["wcag2a", "wcag2aa"],
+    "maxViolationsPerPage": 0
+  },
+  "privacy": {
+    "allowedJournalHosts": []
+  }
+}
