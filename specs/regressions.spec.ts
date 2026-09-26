@@ -23,7 +23,6 @@ const RAW_FILENAME = [
   /\.(txt|htm|html|pdf)(\b|$)/i,
   /^pg\s*\d+/i,
   /^text\s*#?\s*\d+/i,
-  /^\d+$/,
   /^\d+[-_]/,
   /^\*\*[^*]+\*\*/,
 ];

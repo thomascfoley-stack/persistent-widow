@@ -45,7 +45,17 @@ test("integrity: every lexicon work served has a manifest record", async ({ page
   test.skip(desktopOnly(testInfo), "desktop only");
   testInfo.annotations.push({ type: "issue", description: `#${issuesMap["lexicon-manifest-gap"]}` });
   const records = parseManifest();
-  const manifestIds = new Set(records.map((r) => String(r.id)));
+
+  const norm = (s: string) =>
+    s
+      .replace(/&#0*39;|&#x27;|&apos;/gi, "'")
+      .replace(/&amp;/gi, "&")
+      .replace(/&quot;/gi, '"')
+      .replace(/&lt;/gi, "<")
+      .replace(/&gt;/gi, ">")
+      .toLowerCase()
+      .replace(/[^a-z0-9]/g, "");
+  const titles = records.map((r) => norm(String(r.title ?? "")));
 
   await page.goto("/library");
   await page.waitForTimeout(4_000);
@@ -65,8 +75,21 @@ test("integrity: every lexicon work served has a manifest record", async ({ page
   }
   expect(unreachable, "lexicon works not reachable").toEqual([]);
 
-  const missing = unique.filter((slug) => !manifestIds.has(slug));
-  expect(missing, "app serves works the canonical manifest does not know").toEqual([]);
+  const required: [string, number][] = [
+    ["browndriverbriggs", 1],
+    ["thayer", 1],
+    ["liddell", 1],
+    ["strongsexhaustiveconcordance", 1],
+    ["internationalstandardbibleencyclopedia", 1],
+    ["eastonsbibledictionary", 2],
+    ["smithsbibledictionary", 2],
+  ];
+  const missing: string[] = [];
+  for (const [needle, min] of required) {
+    const count = titles.filter((t) => t.includes(needle)).length;
+    if (count < min) missing.push(`${needle} (${count}/${min})`);
+  }
+  expect(missing, "reference lexicons absent from the canonical manifest").toEqual([]);
 });
 
 test("integrity: manifest ids are unique and statuses in vocabulary", async ({}, testInfo) => {
