@@ -9,6 +9,8 @@ jobs:
   sweep:
     runs-on: ubuntu-latest
     timeout-minutes: 60
+    permissions:
+      contents: write
     env:
       BASE_URL: https://ancientpaths.app
     steps:
