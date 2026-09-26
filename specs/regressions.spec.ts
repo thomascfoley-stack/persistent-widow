@@ -24,7 +24,11 @@ const RAW_FILENAME = [
   /^pg\s*\d+/i,
   /^text\s*#?\s*\d+/i,
   /^\d+$/,
+  /^\d+[-_]/,
+  /^\*\*[^*]+\*\*/,
 ];
+
+const BARE_ROMAN_HEADING = /^[IVXLC]+\.$/;
 
 function isRawFilename(text: string): boolean {
   return RAW_FILENAME.some((re) => re.test(text.trim()));
@@ -93,6 +97,17 @@ test.describe("seeded regressions", () => {
     const badTitles = records.filter((r) => typeof r.title === "string" && isRawFilename(r.title));
     expect(badTitles.map((r) => r.title), "manifest titles that are raw filenames").toEqual([]);
 
+    if (hasCreds()) {
+      await test.step("/library/uploads card titles", async () => {
+        await signIn(page);
+        await page.goto("/library/uploads");
+        await page.waitForLoadState("networkidle").catch(() => {});
+        const cardTexts = await page.locator("main h1, main h2, main h3, main a").allInnerTexts();
+        const bad = cardTexts.filter(isRawFilename);
+        expect(bad, "uploaded work titles that are raw filenames").toEqual([]);
+      });
+    }
+
     const slugs = records.filter((r) => r.id).map((r) => r.id).slice(0, 10);
     for (const slug of slugs) {
       await test.step(`/work/${slug}`, async () => {
@@ -141,6 +156,12 @@ test.describe("seeded regressions", () => {
         expect(text, `/work/${slug} Contents missing its own volume heading`).toMatch(
           new RegExp(`Volume\\s+${roman}\\b`)
         );
+        const bare = (await dialog.innerText())
+          .split("\n")
+          .map((s) => s.trim())
+          .filter(Boolean)
+          .filter((s) => BARE_ROMAN_HEADING.test(s));
+        expect(bare, `bare roman headings on /work/${slug}: ${bare.join(", ")}`).toEqual([]);
       });
     }
   });
