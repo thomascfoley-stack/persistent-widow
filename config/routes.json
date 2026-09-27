@@ -29,12 +29,18 @@
     "/plans",
     "/prayers",
     "/read/1co/15",
+    "/read/1ki/13",
+    "/read/gal/1",
+    "/read/gen/3",
     "/read/heb/2",
     "/read/jhn/1",
     "/read/jhn/2",
     "/read/luk/24",
+    "/read/mat/4",
+    "/read/psa/119",
     "/read/rom/6",
     "/read/rom/8",
+    "/read/sng/5",
     "/read/zec/11",
     "/settings"
   ],
@@ -80,7 +86,7 @@
     "/desk"
   ],
   "discovered": {
-    "lastCrawl": "2026-09-26T22:43:16.622Z",
+    "lastCrawl": "2026-09-27T13:34:49.904Z",
     "journalRoute": "/prayers",
     "journalHits": [
       "/prayers (Prayer journal)"
