@@ -30,6 +30,9 @@
     "/prayers",
     "/read/1co/15",
     "/read/1ki/13",
+    "/read/1ki/18",
+    "/read/act/14",
+    "/read/dan/12",
     "/read/gal/1",
     "/read/gen/3",
     "/read/heb/2",
@@ -38,6 +41,9 @@
     "/read/luk/24",
     "/read/mat/4",
     "/read/psa/119",
+    "/read/psa/19",
+    "/read/psa/8",
+    "/read/rom/1",
     "/read/rom/6",
     "/read/rom/8",
     "/read/sng/5",
@@ -86,7 +92,7 @@
     "/desk"
   ],
   "discovered": {
-    "lastCrawl": "2026-09-27T13:34:49.904Z",
+    "lastCrawl": "2026-09-28T16:31:47.375Z",
     "journalRoute": "/prayers",
     "journalHits": [
       "/prayers (Prayer journal)"
