@@ -111,3 +111,8 @@ First night's evidence:
 - workflow: smoke
 - conclusion: success
 - commit: 05abe51
+
+## 2026-09-29 smoke
+- workflow: smoke
+- conclusion: success
+- commit: 8abeb88
