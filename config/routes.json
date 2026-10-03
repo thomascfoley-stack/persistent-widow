@@ -28,12 +28,15 @@
     "/library",
     "/plans",
     "/prayers",
+    "/read/1ch/27",
     "/read/1co/1",
+    "/read/1co/12",
     "/read/1co/15",
     "/read/1co/4",
     "/read/1co/6",
     "/read/1ki/13",
     "/read/1ki/18",
+    "/read/1pe/4",
     "/read/2co/10",
     "/read/2co/12",
     "/read/2pe/3",
@@ -126,7 +129,7 @@
     "/desk"
   ],
   "discovered": {
-    "lastCrawl": "2026-10-02T14:31:43.529Z",
+    "lastCrawl": "2026-10-03T13:06:56.600Z",
     "journalRoute": "/prayers",
     "journalHits": [
       "/prayers (Prayer journal)"
