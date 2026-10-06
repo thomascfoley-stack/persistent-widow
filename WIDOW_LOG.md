@@ -301,3 +301,8 @@ First night's evidence:
 - workflow: smoke
 - conclusion: success
 - commit: 2f0ae48
+
+## 2026-10-06 smoke
+- workflow: smoke
+- conclusion: success
+- commit: 6cc747b
