@@ -446,3 +446,8 @@ First night's evidence:
 - workflow: smoke
 - conclusion: failure
 - commit: fe7bab3
+
+## 2026-10-11 smoke
+- workflow: smoke
+- conclusion: failure
+- commit: 03816db
