@@ -59,6 +59,7 @@
     "/read/act/14",
     "/read/act/4",
     "/read/col/2",
+    "/read/col/3",
     "/read/dan/10",
     "/read/dan/12",
     "/read/dan/2",
@@ -191,7 +192,7 @@
     "/desk"
   ],
   "discovered": {
-    "lastCrawl": "2026-10-14T13:23:10.084Z",
+    "lastCrawl": "2026-10-15T13:08:24.344Z",
     "journalRoute": "/prayers",
     "journalHits": [
       "/prayers (Prayer journal)"
