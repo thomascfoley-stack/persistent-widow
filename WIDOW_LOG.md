@@ -711,3 +711,8 @@ First night's evidence:
 - workflow: scout
 - conclusion: failure
 - commit: 2f5e968
+
+## 2026-10-20 smoke
+- workflow: smoke
+- conclusion: failure
+- commit: 25c24d0
