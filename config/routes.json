@@ -104,6 +104,7 @@
     "/read/jer/23",
     "/read/jhn/1",
     "/read/jhn/10",
+    "/read/jhn/13",
     "/read/jhn/14",
     "/read/jhn/16",
     "/read/jhn/17",
@@ -118,10 +119,12 @@
     "/read/jud/1",
     "/read/luk/17",
     "/read/luk/21",
+    "/read/luk/22",
     "/read/luk/24",
     "/read/mat/15",
     "/read/mat/16",
     "/read/mat/18",
+    "/read/mat/20",
     "/read/mat/24",
     "/read/mat/4",
     "/read/mat/6",
@@ -217,7 +220,7 @@
     "/desk"
   ],
   "discovered": {
-    "lastCrawl": "2026-10-20T13:23:49.029Z",
+    "lastCrawl": "2026-10-21T13:31:31.074Z",
     "journalRoute": "/prayers",
     "journalHits": [
       "/prayers (Prayer journal)"
