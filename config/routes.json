@@ -129,6 +129,7 @@
     "/read/job/35",
     "/read/job/42",
     "/read/jud/1",
+    "/read/luk/11",
     "/read/luk/12",
     "/read/luk/17",
     "/read/luk/21",
@@ -152,6 +153,7 @@
     "/read/nam/1",
     "/read/num/11",
     "/read/num/12",
+    "/read/num/22",
     "/read/php/2",
     "/read/php/4",
     "/read/pro/16",
@@ -244,7 +246,7 @@
     "/desk"
   ],
   "discovered": {
-    "lastCrawl": "2026-10-26T15:03:59.738Z",
+    "lastCrawl": "2026-10-27T14:13:36.716Z",
     "journalRoute": "/prayers",
     "journalHits": [
       "/prayers (Prayer journal)"
