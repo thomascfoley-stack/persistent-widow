@@ -41,6 +41,7 @@
     "/read/1co/15",
     "/read/1co/4",
     "/read/1co/6",
+    "/read/1co/7",
     "/read/1jn/1",
     "/read/1jn/2",
     "/read/1jn/4",
@@ -56,6 +57,7 @@
     "/read/1sa/3",
     "/read/1sa/30",
     "/read/1th/4",
+    "/read/1th/5",
     "/read/2ch/30",
     "/read/2co/1",
     "/read/2co/10",
@@ -105,6 +107,7 @@
     "/read/gal/5",
     "/read/gen/13",
     "/read/gen/3",
+    "/read/gen/5",
     "/read/hab/2",
     "/read/heb/1",
     "/read/heb/10",
@@ -189,6 +192,7 @@
     "/read/pro/30",
     "/read/pro/4",
     "/read/pro/8",
+    "/read/psa/100",
     "/read/psa/103",
     "/read/psa/115",
     "/read/psa/119",
@@ -202,6 +206,7 @@
     "/read/psa/34",
     "/read/psa/36",
     "/read/psa/37",
+    "/read/psa/39",
     "/read/psa/4",
     "/read/psa/40",
     "/read/psa/45",
@@ -280,7 +285,7 @@
     "/desk"
   ],
   "discovered": {
-    "lastCrawl": "2026-11-04T15:59:46.303Z",
+    "lastCrawl": "2026-11-05T16:13:51.150Z",
     "journalRoute": "/prayers",
     "journalHits": [
       "/prayers (Prayer journal)"
