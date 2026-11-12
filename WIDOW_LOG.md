@@ -1296,3 +1296,8 @@ First night's evidence:
 - workflow: smoke
 - conclusion: failure
 - commit: dbbb25a
+
+## 2026-11-12 smoke
+- workflow: smoke
+- conclusion: failure
+- commit: 16430bc
