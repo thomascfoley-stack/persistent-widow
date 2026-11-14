@@ -1341,3 +1341,8 @@ First night's evidence:
 - workflow: smoke
 - conclusion: failure
 - commit: edf610c
+
+## 2026-11-14 smoke
+- workflow: smoke
+- conclusion: failure
+- commit: 0a0e747
