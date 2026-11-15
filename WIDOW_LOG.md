@@ -1386,3 +1386,8 @@ First night's evidence:
 - workflow: smoke
 - conclusion: failure
 - commit: 32dddce
+
+## 2026-11-15 smoke
+- workflow: smoke
+- conclusion: failure
+- commit: ba7ab07
