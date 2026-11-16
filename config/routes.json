@@ -120,6 +120,7 @@
     "/read/hab/2",
     "/read/heb/1",
     "/read/heb/10",
+    "/read/heb/11",
     "/read/heb/12",
     "/read/heb/13",
     "/read/heb/2",
@@ -207,6 +208,7 @@
     "/read/num/22",
     "/read/php/1",
     "/read/php/2",
+    "/read/php/3",
     "/read/php/4",
     "/read/pro/16",
     "/read/pro/2",
@@ -312,7 +314,7 @@
     "/desk"
   ],
   "discovered": {
-    "lastCrawl": "2026-11-15T15:25:34.735Z",
+    "lastCrawl": "2026-11-16T18:00:40.502Z",
     "journalRoute": "/prayers",
     "journalHits": [
       "/prayers (Prayer journal)"
