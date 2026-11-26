@@ -1601,3 +1601,8 @@ First night's evidence:
 - workflow: smoke
 - conclusion: failure
 - commit: fd7683e
+
+## 2026-11-26 scout
+- workflow: scout
+- conclusion: failure
+- commit: 73b6d19
