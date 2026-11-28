@@ -120,6 +120,7 @@
     "/read/eph/4",
     "/read/eph/5",
     "/read/eph/6",
+    "/read/est/10",
     "/read/exo/15",
     "/read/exo/23",
     "/read/exo/3",
@@ -363,7 +364,7 @@
     "/desk"
   ],
   "discovered": {
-    "lastCrawl": "2026-11-27T17:53:44.608Z",
+    "lastCrawl": "2026-11-28T16:40:17.355Z",
     "journalRoute": "/prayers",
     "journalHits": [
       "/prayers (Prayer journal)"
